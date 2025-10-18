@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Management System - Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="landing-page">
+    <div class="landing-container">
+        <div class="container-fluid">
+            <div class="row g-0">
+                <!-- Image Section -->
+                <div class="col-lg-6 d-none d-lg-block image-section">
+                    <div class="image-overlay">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Smart Property Management</h1>
+                            <p class="hero-subtitle">Streamline your property operations with our comprehensive management system</p>
+                            <div class="hero-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-home feature-icon"></i>
+                                    <span>Property Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users feature-icon"></i>
+                                    <span>Tenant Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tools feature-icon"></i>
+                                    <span>Maintenance Tracking</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line feature-icon"></i>
+                                    <span>Financial Reports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auth Section -->
+                <div class="col-lg-6 auth-section">
+                    <div class="auth-container">
+                        <!-- Logo and Welcome -->
+                        <div class="text-center mb-5">
+                            <i class="fas fa-home fa-3x text-primary mb-3"></i>
+                            <h2>Welcome Back</h2>
+                            <p class="text-muted">Sign in to your account or create a new one</p>
+                        </div>
+
+                        <!-- Auth Tabs -->
+                        <ul class="nav nav-pills nav-justified mb-4" id="authTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">
+                                    <i class="fas fa-user-plus me-2"></i>Sign Up
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Login Tab -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label for="loginUsername" class="form-label">Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="loginUsername" name="username" required placeholder="Enter your username">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            <input type="password" class="form-control" id="loginPassword" name="password" required placeholder="Enter your password">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        <a href="#" class="float-end text-decoration-none">Forgot password?</a>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100 mb-3 auth-btn" id="loginBtn">
+                                        <span class="btn-text">Sign In</span>
+                                        <div class="spinner-border spinner-border-sm d-none" role="status"></div>
+                                    </button>
+
+                                    <div class="text-center">
+                                        <small class="text-muted">Demo: admin / admin123</small>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Signup Tab -->
+                            <div class="tab-pane fade" id="signup" role="tabpanel">
+                                <form id="signupForm">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" name="first_name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" name="last_name" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="signupEmail" class="form-label">Email Address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="signupEmail" name="email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="signupUsername" class="form-label">Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="signupUsername" name="username" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="signupPassword" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            <input type="password" class="form-control" id="signupPassword" name="password" required>
+                                        </div>
+                                        <div class="form-text">
+                                            Password must be at least 8 characters long
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            <input type="password" class="form-control" id="confirmPassword" name="confirm_password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success w-100 auth-btn" id="signupBtn">
+                                        <span class="btn-text">Create Account</span>
+                                        <div class="spinner-border spinner-border-sm d-none" role="status"></div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Social Login -->
+                        <div class="text-center mt-4">
+                            <div class="separator">or continue with</div>
+                            <div class="social-buttons mt-3">
+                                <button class="btn btn-outline-secondary me-2">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                                <button class="btn btn-outline-secondary me-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>
+                        <i class="fas fa-home me-2"></i>
+                        House Management System
+                    </h5>
+                    <p class="text-muted" style="color: #bdc3c7 !important;">
+                        Streamlining property management with innovative solutions. 
+                        Manage your properties, tenants, and finances all in one place.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="fas fa-tachometer-alt"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html#properties">
+                                <i class="fas fa-home"></i>
+                                Properties
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html#tenants">
+                                <i class="fas fa-users"></i>
+                                Tenants
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-question-circle"></i>
+                                Help Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-comments"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Contact Information</h5>
+                    <div class="footer-contact">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Business Street, Suite 100<br>
+                            Cityville, State 12345
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            support@hmis.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-credits">
+                    <div class="copyright">
+                        &copy; 2023 House Management System. All rights reserved.
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/landing.js"></script>
+    <!-- Before closing </body> tag in dashboard.html -->
+<script src="js/api/endpoints.js"></script>
+<script src="js/api/apiService.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/notifications.js"></script>
+<script src="js/utils/loading.js"></script>
+<script src="js/utils/searchFilter.js"></script>
+<script src="js/utils/mobileNav.js"></script>
+<script src="js/utils/footer.js"></script>
+<script src="js/modules/dashboard.js"></script>
+<script src="js/modules/properties.js"></script>
+<script src="js/modules/tenants.js"></script>
+<script src="js/modules/maintenance.js"></script>
+<script src="js/modules/finances.js"></script>
+<script src="js/modules/users.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
